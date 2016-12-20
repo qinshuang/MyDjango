@@ -24,17 +24,19 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = (
     # 'django.contrib.admin',
-    # 'django.contrib.auth',
-    # 'django.contrib.contenttypes',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'test',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,3 +84,6 @@ USE_TZ = True
 STATIC_URL = '/statics/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, '../../templates'),)
+
+# test
+TEST_RUNNER = 'test.runner.NoDbTestRunner'
