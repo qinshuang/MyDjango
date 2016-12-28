@@ -11,5 +11,9 @@ def login(request):
     return HttpResponse(u'hello')
 
 
+def index(request):
+    return render(request, 'index.html')
+
+
 def user_manage(request):
-    return render(request,'index.html')
+    return render(request, 'index.html')
