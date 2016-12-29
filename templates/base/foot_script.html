@@ -2,52 +2,14 @@
 <script src="{% static 'base/jquery-2.2.2.min.js' %}"></script>
 
 <script src="{% static 'plugins/bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'plugins/bootstrap-notify/bootstrap-notify.min.js' %}"></script>
 
 <script src="{% static 'plugins/bootstrap-material-design/js/material.min.js' %}"></script>
 <script src="{% static 'plugins/bootstrap-material-design/js/ripples.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-notify/bootstrap-notify.min.js' %}"></script>
 
 <script src="{% static 'plugins/dropdown.js/jquery.dropdown.js' %}"></script>
 
 
 <script>
-    $(function () {
-        $.material.init();
 
-        $.show_message = function (msg, type) {
-            var icon;
-            switch (type) {
-                case 'info':
-                    icon = 'fa fa-info-circle';
-                    break;
-                case 'danger':
-                    icon = 'fa fa-exclamation-triangle';
-                    break;
-                case 'warning':
-                    icon = 'fa fa-exclamation-triangle';
-                    break;
-                case 'success':
-                    icon = 'fa fa-smile-o';
-                    break;
-            }
-            $.notify({
-                // options
-                icon: icon,
-                message: msg
-            }, {
-                // settings
-                element: 'body',
-                position: null,
-                type: type,
-                delay: 1000,
-                timer: 3000,
-                z_index: 1031,
-                newest_on_top: true,
-                placement: {
-                    from: "bottom",
-                    align: "right"
-                }
-            });
-        };
-    });
 </script>
